@@ -1,0 +1,27 @@
+
+
+CREATE TABLE IF NOT EXISTS public.tarefas (
+  id BIGSERIAL PRIMARY KEY,
+  nome TEXT,
+  titulo TEXT,
+  descricao TEXT,
+  status TEXT,
+  created_at TIMESTAMP DEFAULT NOW(),
+  user_id UUID REFERENCES auth.users (id)
+);
+
+
+
+ALTER TABLE public.tarefas ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY Enable read access for all users
+ON public.tarefas
+FOR SELECT
+TO public
+USING (true);
+
+CREATE POLICY Permitir todos inserirem tarefas
+ON public.tarefas
+FOR INSERT
+TO public
+WITH CHECK (true);
