@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="scripts/tolist.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles/tolist.css">
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-end align-items-center pt-4 mb-4">
+            <div id="perfilUser" class="perfil-container">
+                <div id="perfilIcon" class="perfil-icon"></div>
+                <button type="button" class="btn" id="logout" onclick="logoutUser()"
+                    style="cursor: pointer;">Sair</button>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+            <div>
+                <button type="button" class="btn btn-primary p-2 " id="novaTarefa" data-bs-toggle="modal"
+                    data-bs-target="#modalTarefa">
+                    Nova Tarefa
+                </button>
+            </div>
+
+            <div class="flex-grow-1 d-flex justify-content-end">
+                <input type="text" id="pesquisaInput" class="form-control w-25"
+                    placeholder="Pesquisar por descrição...">
+            </div>
+        </div>
+
+        <div class="row text-center bg-white text-dark rounded-3 p-2 shadow-sm">
+            <div class="col fw-semibold">Nome</div>
+            <div class="col fw-semibold">Título</div>
+            <div class="col fw-semibold">Descrição</div>
+            <div class="col fw-semibold">Status</div>
+            <div class="col fw-semibold">Ações</div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTarefa" tabindex="-1" aria-labelledby="modalTarefaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg border-0 rounded-4">
+
+                <div class="modal-header bg-primary text-white rounded-top-4 titulo">
+                    <h5 class="modal-title fw-semibold " id="modalTarefaLabel">Nova Tarefa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Nome</label>
+                        <input type="text" class="form-control input-nome" placeholder="Digite o nome da tarefa"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Título</label>
+                        <input type="text" class="form-control input-titulo" placeholder="Digite o título" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Descrição</label>
+                        <input class="form-control input-descricao" rows="3" placeholder="Digite a descrição"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Status</label>
+                        <select class="form-select input-status" required>
+                            <option value="">Selecione o status</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Concluída">Concluída</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-footer d-flex justify-content-between px-4 pb-4 ">
+                    <button type="button" class="btn btn-secondary px-4 botoes" id="voltar">Voltar</button>
+                    <button type="button" class="btn btn-success px-4 botoes" id="salvarTarefa">Salvar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>

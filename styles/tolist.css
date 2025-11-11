@@ -1,0 +1,91 @@
+
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  font-size: 15px;
+  transition:  0.3s;
+}
+
+.form-control:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 5px rgba(124, 58, 237, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  height: 44px;
+}
+
+.status-badge {
+  border-radius: 20px;
+  font-weight: 600;
+  color: #000 ;       
+  padding: 6px 12px;
+  border: 2px solid transparent; 
+}
+
+
+.status-concluida {
+  background-color: #c8f7c5;     
+  border-color: #34c759;         
+}
+
+.status-pendente {
+  background-color: #fff6b3;     
+  border-color: #e0b100;         
+}
+
+.editar{
+  background-color: #5c6bc0;     
+  border: 2px solid #3949ab;      
+  color: #fff;                    
+  border-radius: 8px;           
+  transition: 0.3s ;
+}
+
+.excluir{
+  background-color: #f52222;    
+  color: #fff;                    
+  transition: 0.3s ; 
+
+}
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: -55px;
+    
+}
+
+.perfil-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #5c6bc0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.botoes{
+background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+
+}
+
+.titulo{
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+
+}
